@@ -1,0 +1,78 @@
+%extend-ul {
+    margin: 0;
+    padding: 0;
+}
+
+%extend-li {
+    text-decoration: none;
+}
+
+%extend-link {
+    display: inline-block;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: $sub-color;
+    background: $link-bg;
+    border: 1px solid $link-bg;
+    border-radius: 90px;
+    padding: 12px 47px;
+    transition: background .5s ease, color .5s ease;
+
+    &:hover {
+        background: $sub-color;
+        color: $link-bg;
+    }
+}
+
+%extend-anchor {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.09em;
+    text-align: center;
+    color: $main-color;
+    background: $sub-color;
+    border: 1px solid $main-color;
+    padding: 14px 15px 14px 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    min-width: 331px;
+    transition: background .5s ease, color .5s ease, transform .5s ease, fill .5s ease;
+
+    &:hover {
+        background: $link-bg;
+        border: 1px solid $link-bg;
+        color: $sub-color;
+    }
+}
+
+%extend-readmore {
+    display: flex;
+    align-items: center;
+    font-family: $main-font;
+    color: $main-color;
+}
+
+@media (max-width: $mobile-breakpoint) {
+    %extend-link {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        padding: 11px 38px;
+    }
+
+    %extend-anchor {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        padding: 10px 15px 10px 40px;
+        gap: 14px;
+        min-width: auto;
+    }
+}

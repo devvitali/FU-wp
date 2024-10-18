@@ -1,0 +1,64 @@
+.video-content {
+    background: linear-gradient(to bottom, $site-sub-bg 97.5%, $sub-color 2.5%);
+    padding: 75px 0 0 0;
+
+    .video-wrapper {
+        margin: 0 auto 125px auto;
+        max-width: 1200px;
+
+        .video {
+            position: relative;
+            padding-top: 56.25%;
+            height: 0;
+
+            > video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }  
+    }
+
+    a {
+        @extend %extend-link;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border-bottom: 1px solid #149926;
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .video-content {
+        background: linear-gradient(to bottom, $site-sub-bg 96.5%, $sub-color 3.5%);
+
+        .video-wrapper {
+            margin: 0 auto 75px auto;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .video-content {
+        background: linear-gradient(to bottom, $site-sub-bg 94%, $sub-color 6%);
+        padding: 20px 0 0 0;
+
+        .container {
+            max-width: 100%;
+        }
+
+        .video-wrapper {
+            margin: 0 auto 75px auto;
+        }
+
+        a {
+            max-width: 90%;
+        }
+    }
+}

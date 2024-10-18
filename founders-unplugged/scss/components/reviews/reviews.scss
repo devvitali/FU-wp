@@ -1,0 +1,190 @@
+.reviews {
+    background: $site-sub-bg;
+    padding: 140px 0 129px 0;
+
+    h3 {
+        font-family: $sub-font;
+        font-weight: 300;
+        font-size: 	1.875rem;
+        line-height: 2.0625rem;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: $main-color;
+        text-transform: lowercase;
+        margin: 0 0 64px 0;
+    }
+
+    .reviews-slider {
+        max-width: 1143px;
+        margin: 0 auto;
+
+        .slick-list,
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-arrow {
+            background: $site-sub-bg;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            cursor: pointer;
+            transition: all 200ms linear;
+            width: 40px;
+            height: 40px;
+            border: none;
+            outline: none;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+
+            &.slick-next {
+                right: 0;
+            }
+
+            &.slick-prev {
+                left: 0;
+            }
+        }
+
+        .slide {
+            margin: 0 150px;
+
+            > p {
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+                letter-spacing: 0.02em;
+                text-align: center;
+                color: $main-color;
+                margin: 0 auto 9px auto;
+                max-width: 763px;
+
+                > span {
+                    font-family: $italic-font;
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 1.375rem;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+    }
+
+    .slider-arrows {
+        display: none;
+    }
+
+    img {
+        max-width: 180px;
+        max-height: 130px;
+        width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: $font-breakpoint) {
+    .reviews {
+
+        h3 {
+            font-size: calc(1.875rem + 1.875 * (100vw / 1282));
+            line-height: 2.1875rem;
+        }
+
+        .reviews-slider {
+
+            .slide {
+
+                > p {
+                    font-size: calc(1.125rem + 1.125 * (100vw / 1282));
+                    line-height: 2rem;
+
+                    > span {
+                        font-size: calc(1rem + 1 * (100vw / 1282));
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .reviews {
+        padding: 75px 0;
+
+        .reviews-slider {
+
+            .slide {
+                margin: 0 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .reviews {
+        padding: 42px 0 35px 0;
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 1.685rem;
+            margin: 0 auto 54px auto;
+            max-width: 283px;
+        }
+
+        .reviews-slider {
+
+            .slide {
+                margin: 0 10px;
+
+                > p {
+                    font-size: 1.0625rem;
+                    line-height: 1.5rem;
+                    margin: 0 auto 30px auto;
+
+                    > span {
+                        font-size: 1rem;
+                        line-height: 1.3125rem;
+                    }
+                }
+            }
+        }
+
+        .slider-arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 74px;
+            margin: 30px 0;
+
+            .slick-arrow {
+                background: #FAF8F4;
+                padding: 0;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                border: none;
+                outline: none;
+
+                > img {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        img {
+            max-width: 150px;
+            max-height: 108px;
+        }
+    }
+}
