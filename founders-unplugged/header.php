@@ -59,13 +59,13 @@
             </a>
           <?php endif; ?>
           <ul class="menu-list">
-			  <?php 
-                    if( have_rows('menu_s', 'option') ):
+			  <?PHP 
+                    	if( have_rows('menu_s', 'option') ):
                         while( have_rows('menu_s', 'option') ): the_row();
                            $name_menu_s = get_sub_field('name_menu_s');
                            $section = get_sub_field('section');
-               ?>
-			         <li><a data-goto=".<?php echo esc_html($section); ?>" href="#"><?php echo $name_menu_s; ?></a></li>
+               		?>
+			<li><a data-goto=".<?php echo esc_html($section); ?>" href="#"><?php echo $name_menu_s; ?></a></li>
         	   <?php
                     endwhile;
                endif;
@@ -93,7 +93,7 @@
           </div>
         </div>
 		  
-		<div class="popup" id="steps">
+	<div class="popup" id="steps">
           <div class="popup-body">
             <div class="popup-content">
               <div class="popup-box">
@@ -104,12 +104,9 @@
 				  <div id="form-container">
 					  <?php echo do_shortcode($form_step); ?>
 				  </div>
-				  
 				  <div class="ty-message" id="success-message" style="display: none;">
 					  <div class="divider"></div>
-					  <p>
-						  Thank you for completing the form! We will be in touch with you shortly
-					  </p>
+					  <p>Thank you for completing the form! We will be in touch with you shortly</p>
 					  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Back to the home page</a>
 				  </div>
                   <img src="<?php echo get_template_directory_uri(); ?>/img/butterflies/butterfly-8.png" alt="butterfly">
